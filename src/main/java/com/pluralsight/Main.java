@@ -15,5 +15,17 @@ public class Main {
             System.out.print("Float: " + money1 + " Double: " + money2 + " BigDecimal: " + money3);
             System.out.println();
         }
+
+        money1 = 0;
+        money2 = 0;
+        money3 = BigDecimal.ZERO;
+
+        for (int i = 0; i < 1000; i++) {
+            money1 += 19.99;
+            money2 += 19.99;
+            money3 = money3.add(new BigDecimal("19.99"));
+        }
+
+        System.out.print("Float: " + money1 + " Double: " + money2 + " BigDecimal: " + money3);
     }
 }
